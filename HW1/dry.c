@@ -75,39 +75,6 @@ int main() {
 	int num=0;
 	something *resultArray = NULL;
 	swapIfFirstNegative(arr,resultArray,4,&num);
-//		printf("\n**************************************\n");
-//		for (int i=0;i<4;i++)
-//			printf("a=%d b=%d \n",resultArray[i].a,resultArray[i].b);
-//		printf("\n**************************************\n");
 
-
-//	Node head = NULL;
-//	Node fixedHead = NULL;
-//	Node current;
-//
-//	current = malloc(sizeof(Node));
-//	current->data = 15;
-//	current->next  = head;
-//	head = current;
-//	fixedHead = current;
-//
-//	for(int i=1;i<=3;i++) {
-//		current = malloc(sizeof(Node));
-//		current->data = i;
-//		current->next  = head;
-//	    head = current;
-//	   }
-//	fixedHead->next = head;
-//
-//	while (current != fixedHead) {
-//		printf("%d -> ",current->data);
-//		current = current->next;
-//	}
-//
-//	printf("%d -> %d",fixedHead->data, fixedHead->next->data);
-//	printf("\n Head Node: %d",fixedHead->data);
-//
-//	printf("\n******************\n");
-//	print_reverse(fixedHead);
 	return 0;
 }

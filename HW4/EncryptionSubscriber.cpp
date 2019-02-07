@@ -9,8 +9,5 @@ void EncryptionSubscriber::receiveMessage(const std::string message, const Topic
     for (unsigned int i=0 ; i<message.size() ; ++i) {
         encrypted[i]=(encrypted[i])^key;
     }
-//    this->getMessagesSink() << "Topic:" << t << "Sender:" << c.getId() <<
-//    "Receiver:#" << this->getId() << "Message:" << encrypted << std::endl;
     Subscriber::receiveMessage(encrypted, t, c);
 }
-

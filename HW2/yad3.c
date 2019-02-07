@@ -178,18 +178,10 @@ static int calcAverage(Realtor realtor, bool isArea) {
 	int sum=0;
 	int out_result=0;
 	int count=0;
-//	char* iterator = mapGetFirst(apartment_service_map);
-//	ApartmentService current = mapGet(apartment_service_map, iterator);
-//	serviceAreaMedian(current, &out_result);
-//	printf("%d\n ", out_result);
-//	ApartmentServiceResult error;
 	MAP_FOREACH(ApartmentService,iterator,apartment_service_map)   {
-//	for(char* iterator = mapGetFirst(apartment_service_map) ;iterator ; iterator = mapGetNext(apartment_service_map)) {
 		ApartmentService current = mapGet(apartment_service_map, iterator);
 		isArea?(serviceAreaMedian(current, &out_result)):(servicePriceMedian(current, &out_result));
 		sum+=out_result;
-//		printf("%d\n ", out_result);
-//		out_result=0;
 		count++;
 	}
 	return (sum/count);
@@ -308,7 +300,7 @@ static int calcFinalPrice(Apartment apartment, Realtor realtor) {
 	return apartmentGetPrice(apartment)+(apartmentGetPrice(apartment)*realtorGetTaxPercentage(realtor)/100);
 }
 
-/** 
+/**
  * A copying function of a customer in a List.
  * @return
  * A newly allocated copy of a given customer.
@@ -330,7 +322,7 @@ static void listCustomerDestroy (ListElement customer) {
 	customerDestroy(customer);
 }
 
-/** 
+/**
  * A copying function of a realtor in a List.
  * @return
  * A newly allocated copy of a given realtor.
@@ -352,7 +344,7 @@ static void listRealtorDestroy (ListElement realtor) {
 	realtorDestroy(realtor);
 }
 
-/** 
+/**
  * A copying function of a realtor in a Map.
  * @return
  * A newly allocated copy of a given realtor.
@@ -374,7 +366,7 @@ static void mapRealtorDestroy (MapDataElement realtor) {
 	realtorDestroy(realtor);
 }
 
-/** 
+/**
  * A copying function of a customer in a Map.
  * @return
  * A newly allocated copy of a given realtor.
@@ -396,7 +388,7 @@ static void mapCustomerDestroy (MapDataElement customer) {
 	customerDestroy(customer);
 }
 
-/** 
+/**
  * A copying function of an offer in a Set.
  * @return
  * A newly allocated copy of a given offer.

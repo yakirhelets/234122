@@ -1,7 +1,6 @@
 #include "Broker.h"
 
 void Broker::subscribeToTopic(const Subscriber& sub, const Topic& t) {
-//	std::map<Topic,SortedSet<const Client*,CompareClients>>::iterator it = clientMap.find(t);
 	const Client* ptr = &sub;
 	clientMap[t].insert(ptr);
 }
@@ -15,13 +14,11 @@ void Broker::unsubscribeToTopic(const Subscriber& sub, const Topic& t) {
 }
 
 void Broker::publishTopic(const Publisher& pub, const Topic& t) {
-//	std::map<Topic,SortedSet<const Client*,CompareClients>>::iterator it = clientMap.find(t);
 	const Client* ptr = &pub;
 	clientMap[t].insert(ptr);
 }
 
 void Broker::unpublishTopic(const Publisher& pub, const Topic& t) {
-//	std::map<Topic,SortedSet<const Client*,CompareClients>>::iterator it = clientMap.find(t);
 	const Client* ptr = &pub;
 	clientMap[t].remove(ptr);
 }
@@ -32,9 +29,6 @@ void Broker::publishMessage(const Topic& t, const std::string& message,
 		SortedSet<const Client*,CompareClients> set = clientMap.at(t);
 		for(SortedSet<const Client*,CompareClients>::iterator it = set.begin()
 		; it != set.end() ; ++it ) {
-//			(*it)->getMessagesSink() << "Topic: " << t << ". Sender: #" <<
-//			sender.getId() << ". Receiver: #" << (*it)->getId() << ". Message: "
-//			<< message << std::endl;
 			(*it)->receiveMessage(message, t, sender);
 		}
 	}

@@ -85,29 +85,6 @@ static void checkCommandLineParameters(int argc, char** argv, Yad3Result* error_
 	}
 }
 
-//static void handleInputOutputFiles(int argc, char** argv, FILE* input, FILE* output, Yad3Result* error_code) {
-//	/* checks for opening input file failure*/
-//	MtmErrorCode mtm_error_code;
-//	input = initInput(argc, argv);
-//	if (!input) {
-//		*error_code = YAD3_CANNOT_OPEN_FILE;
-//		Yad3ResultToMtmErrorCode(*error_code, &mtm_error_code);
-//		mtmPrintErrorMessage (stderr, mtm_error_code);
-//		return;
-//	}
-//	/* checks for opening output file failure*/
-//	output = initOutput(argc, argv);
-//	if (!output) {
-//		if (input != stdin) {
-//			fclose(input);
-//		}
-//		*error_code = YAD3_CANNOT_OPEN_FILE;
-//		Yad3ResultToMtmErrorCode(*error_code, &mtm_error_code);
-//		mtmPrintErrorMessage (stderr, mtm_error_code);
-//		return;
-//	}
-//}
-
 /** functions related to realtor*/
 
 static void executeRealtorAdd(char* string, Yad3 yad3, Yad3Result* error_code) {
@@ -316,7 +293,7 @@ static void handleReportCommand(FILE* output, char* second_word, char* current_l
 				*error_code = MTM_INVALID_PARAMETERS;
 				mtmPrintErrorMessage(stderr, MTM_INVALID_PARAMETERS);
 			}
-}	
+}
 
 static void handleCommand(FILE* output, char* first_word, char* second_word, char* current_line, Yad3 yad3, Yad3Result* error_code)	{
 	if (strcmp(first_word,"realtor") == 0) {
@@ -382,7 +359,7 @@ int main(int argc, char** argv) {
 	checkCommandLineParameters(argc, argv, &yad3_result);
 	if (yad3_result == YAD3_INVALID_COMMAND_LINE_PARAMETERS)	{
 		yad3Destroy(yad3);
-		return 1;	
+		return 1;
 	}
 
 	FILE* input = initInput(argc, argv);
@@ -404,7 +381,7 @@ int main(int argc, char** argv) {
 //	handleInputOutputFiles(argc, argv, input, output, &yad3_result);
 	if (yad3_result == YAD3_CANNOT_OPEN_FILE)	{
 		yad3Destroy(yad3);
-		return 1;	
+		return 1;
 	}
 	handleLines(input, output, yad3);
 	/*closing the input/output if they are files*/
