@@ -1,0 +1,32 @@
+###
+#########apartments in King's Landing#########
+
+King's Landing 18 Tower of Joy 6 2950 052-1310001 01.03.1000
+King's Landing 18 TOWER OF    JOY 5 2000 052-2310001 02.03.1000
+
+# name of the steet is not "Tower of Joy" - should not print any of them
+King's Landing 18 TOWER OF  Joyyyyy 5 2000 052-2310001 02.03.1000
+King's Landing 18 Joy of tower 5 2000 052-2310001 02.03.1000
+King's Landing 18 Of Joy tower 5 2000 052-2310001 02.03.1000
+King's Landing 18 Tower Joy of 5 2000 052-2310001 02.03.1000
+###
+###
+#########apartments in Winterfell#########
+
+Winterfell 15 Crypt   OF     WinterfEll 3 3500 050-3051001 30.5.1100
+Winterfell 17 Crypt          of Winterfell 3 2440 050-2551001 25.5.1100
+
+Winterfell 15 The Great Keep 1 7000 050-1110000 01.01.1100
+Winterfell 16 The Great Keep 2 3000 050-1110001 01.01.1100
+Winterfell 17 The Great KEEP 3 5000 050-1110002 01.1.1100
+Winterfell 18 The Great Keep 4 8000 050-1110003 1.01.1100
+Winterfell 19 The Great Keep 5 4000 050-1110004 01.01.1100
+Winterfell 20 The Great Keep 6 6000 050-1110005 1.1.1100
+
+Winterfell 15    The    Great KEEP 1 7500 050-2210000 02.01.1100
+Winterfell 16 The    Great Keep 2 6500 050-2210001 02.1.1100
+Winterfell 17 The Great Keep 3 5500 050-2210002 2.01.1100
+Winterfell 18 The    Great    Keep 4 8500 050-2210003 2.01.1100
+Winterfell 19 The    Great Keep 5 4500 050-2210004 02.1.1100
+Winterfell 20 tHE greaT Keep 6 6500 050-2210005 02.01.1100
+###

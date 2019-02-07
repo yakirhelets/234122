@@ -1,0 +1,11 @@
+#Sources of apartments for rent
+
+# bad flats
+bad1.Flat # bad flat - should be "flat" and not "Flat"
+bad2.FlAt # bad flat - should be "flat" and not "FlAt"
+bad3.fflat # bad flat - should be "flat" and not "fflat"
+
+
+# good flats
+flat1.flat
+good1.flat	

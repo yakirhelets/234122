@@ -1,0 +1,14 @@
+#!/bin/bash
+PATH=${PATH[*]}:.
+i=1; 
+while [[ -f test$i ]]; do  
+	echo -n Running test $i:
+	test${i} 1> test${i}.out 
+	if [[ $(diff test${i}.expout test${i}.out | wc -w) -gt 0 ]]; then 
+		echo -n " Failure. You're gonna go straight outta Compton"
+	else  
+		echo -n " Success. Iluha greets you "
+	fi 
+	let i++
+	echo ""
+done
